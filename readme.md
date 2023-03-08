@@ -72,3 +72,21 @@ npm run build --dd - Ejecuta el script build del package.json en modo debug
 npm ci sincroniza el package-lock.json con el package.json.
 
 el package-lock.json es un archivo que se genera cuando instalamos las dependencias y nos sirve para que cuando alguien mas instale las dependencias, se instalen las mismas versiones que nosotros.
+
+al crear un paquete para publicar
+
+debemos recordar hacer la carpeta bin y dentro el archivo que queremos que se ejecute.
+
+luego debemos agregar la logica en el archivo index.js
+
+y agregar todo al package.json como por ejemplo: "bin": { "nombre_paquete": "bin/index.js" },
+
+luego debemos crear una cuenta en npmjs.com y loguearnos con npm login
+
+luego debemos crear un repositorio en github y subir el codigo. debe tener el mismo nombre que tendra en npmjs.com. por eso debemos chequear que no haya ya paquetes con ese nombre.
+
+nos debemos parar en nuestra carpeta y ejecturar
+
+npm link que nos dirá si hay vulnerabilidades o no.
+
+en caso de que no haya vulnerabilidades, ejecutamos npm publish.
